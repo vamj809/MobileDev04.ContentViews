@@ -1,7 +1,36 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Application xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MobileDev04.ContentViews.App">
+             x:Class="MobileDev04.ContentViews.App"
+             xmlns:views="clr-namespace:MobileDev04.ContentViews.Views">
     <Application.Resources>
+        <ResourceDictionary>
+            <Style x:Key="TitleLabelStyle" TargetType="Label">
+                <Setter Property="FontAttributes" Value="Bold"/>
+                <Setter Property="TextColor" Value="Black"/>
+                <Setter Property="FontSize" Value="Medium"/>
+            </Style>
+            <Style x:Key="SubtitleLabelStyle" TargetType="Label">
+                <Setter Property="TextColor" Value="SlateGray"/>
+                <Setter Property="FontSize" Value="Small"/>
+            </Style>
+            <Style x:Key="ImageMenuStyle" TargetType="Image">
+                <Setter Property="Margin" Value="10"/>
+            </Style>
+            <Style TargetType="Label">
+                <Setter Property="HorizontalOptions" Value="CenterAndExpand"/>
+            </Style>
+            <Style TargetType="views:MenuElementView">
+                <Setter Property="BackgroundColor" Value="#aaffffff"/>
+                <Setter Property="Padding" Value="10"/>
+                <Setter Property="RowDefinitions" Value="90,Auto,Auto"/>
+                <Setter Property="ColumnDefinitions" Value="*"/>
+                <Setter Property="HeightRequest" Value="150"/>
+            </Style>
+
+            <Style TargetType="views:MainMenuPage">
+                <Setter Property="BackgroundColor" Value="#ddd"/>
+            </Style>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>

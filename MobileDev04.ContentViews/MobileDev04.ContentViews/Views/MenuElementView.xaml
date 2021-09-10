@@ -3,13 +3,8 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
       x:Class="MobileDev04.ContentViews.Views.MenuElementView"
       xmlns:models="clr-namespace:MobileDev04.ContentViews.Models" 
-      x:DataType="models:MenuOption"
-      Padding="10"
-      RowDefinitions="90,Auto,Auto"
-      ColumnDefinitions="*"
-      HeightRequest="150"
-      BackgroundColor="#ddffffff">
-    <Image Grid.Row="0" Margin="10" Source="{Binding Image}" HorizontalOptions="CenterAndExpand" />
-    <Label Grid.Row="1" Text="{Binding Title}" FontSize="Medium" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" />
-    <Label Grid.Row="2" Text="{Binding Subtitle}" FontSize="Small" HorizontalOptions="CenterAndExpand" />
+      x:DataType="models:MenuOption">
+    <Image Grid.Row="0" Source="{Binding Image}" Style="{StaticResource ImageMenuStyle}"/>
+    <Label Grid.Row="1" Text="{Binding Title}" Style="{StaticResource TitleLabelStyle}"/>
+    <Label Grid.Row="2" Text="{Binding Subtitle}" Style="{StaticResource SubtitleLabelStyle}"/>
 </Grid>
