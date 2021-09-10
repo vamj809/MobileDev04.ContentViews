@@ -2,21 +2,12 @@
 <TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
             x:Class="MobileDev04.ContentViews.Views.MainMenuPage"
-            xmlns:views="clr-namespace:MobileDev04.ContentViews.Views"
+            xmlns:views="clr-namespace:MobileDev04.ContentViews.Views" 
+            xmlns:viewmodels="clr-namespace:MobileDev04.ContentViews.ViewModels" 
+            x:DataType="viewmodels:MainMenuViewModel"
             Title="Discovery">
     
-    <!--Pages can be added as references or inline-->
-    <ContentPage Title="Home" IconImageSource="HomeIcon">
-        <Grid RowDefinitions="Auto, Auto, Auto" ColumnDefinitions="*,*" 
-              Margin="20" RowSpacing="20" ColumnSpacing="20">
-            <views:MenuElementView Grid.Column="0" Grid.Row="0" BindingContext="{Binding BarsMenuOption}"/>
-            <views:MenuElementView Grid.Column="1" Grid.Row="0" BindingContext="{Binding DinersMenuOption}"/>
-            <views:MenuElementView Grid.Column="0" Grid.Row="1" BindingContext="{Binding CafesMenuOption}"/>
-            <views:MenuElementView Grid.Column="1" Grid.Row="1" BindingContext="{Binding NearbyMenuOption}"/>
-            <views:MenuElementView Grid.Column="0" Grid.Row="2" BindingContext="{Binding FastFoodsMenuOption}"/>
-            <views:MenuElementView Grid.Column="1" Grid.Row="2" BindingContext="{Binding FeaturedFoodsMenuOption}"/>
-        </Grid>
-    </ContentPage>
+    <ContentPage Title="Home" IconImageSource="HomeIcon"/>
     <ContentPage Title="Discovery" IconImageSource="DiscoveryIcon">
         <CollectionView ItemsSource="{Binding DiscoveryMenuOptions}" 
                         SelectedItem="{Binding SelectedMenuOption}" SelectionMode="Single" 
@@ -30,7 +21,6 @@
                 </DataTemplate>
             </CollectionView.ItemTemplate>
         </CollectionView>
-        
     </ContentPage>
     <ContentPage Title="Bookmark" IconImageSource="BookmarkIcon"/>
     <ContentPage Title="Top Foods" IconImageSource="TopFoodsIcon"/>
