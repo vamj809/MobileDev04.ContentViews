@@ -1,6 +1,5 @@
-﻿using System;
+﻿using MobileDev04.ContentViews.Views;
 using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
 
 namespace MobileDev04.ContentViews
 {
@@ -9,7 +8,7 @@ namespace MobileDev04.ContentViews
         public App() {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new MainMenuPage();
         }
 
         protected override void OnStart() {

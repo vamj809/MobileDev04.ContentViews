@@ -1,9 +1,15 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<StackLayout xmlns="http://xamarin.com/schemas/2014/forms" 
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MobileDev04.ContentViews.Views.MenuElementView"
-             >
-    <Image Source="1.png"/>
-    <Label Text="Menu" FontSize="Large" FontAttributes="Bold"/>
-    <Label Text="Detail" FontSize="Small"/>
-</StackLayout>
+<Grid xmlns="http://xamarin.com/schemas/2014/forms"
+      xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+      x:Class="MobileDev04.ContentViews.Views.MenuElementView"
+      xmlns:models="clr-namespace:MobileDev04.ContentViews.Models" 
+      x:DataType="models:MenuOption"
+      Padding="10"
+      RowDefinitions="90,Auto,Auto"
+      ColumnDefinitions="*"
+      HeightRequest="150"
+      BackgroundColor="#ddffffff">
+    <Image Grid.Row="0" Margin="10" Source="{Binding Image}" HorizontalOptions="CenterAndExpand" />
+    <Label Grid.Row="1" Text="{Binding Title}" FontSize="Medium" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" />
+    <Label Grid.Row="2" Text="{Binding Subtitle}" FontSize="Small" HorizontalOptions="CenterAndExpand" />
+</Grid>
